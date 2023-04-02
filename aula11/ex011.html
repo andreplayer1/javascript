@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Exercico 11
+    </h1>
+
+    <form action="#" name="formulario1" id="formulario1">
+        Pais:<input type="text" name="entrada" id="entrada">
+        <input type="button" value="Verificar" onclick="myFunction()">
+    </form>
+
+    <div id="resp">
+
+    </div>
+
+    <script>
+        function myFunction(){
+            var entrada = document.querySelector('input#entrada')
+            var res = document.querySelector('div#resp')
+            var pais = (entrada.value)
+            
+            res.innerHTML += `Você mora no <strong>${pais} `
+            if (pais=='Brasil'){
+                res.innerHTML += 'Você é brasileiro!'
+            } else {
+                res.innerHTML += 'Você é estrangeiro'
+            }
+        }
+    </script>
+
+</body>
+</html>
