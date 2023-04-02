@@ -15,8 +15,6 @@
             line-height: 200px;
             text-align: center;
             border-radius: 50%;
-            box-shadow: 2px 2px 7px black;
-            text-shadow: 2px 2px 7px red;
         }
     </style>
 </head>
@@ -27,24 +25,45 @@
 
     <script>
         var a = window.document.getElementById('area')
-        addEventListener('mouseout', sair)
         addEventListener('click', clicar)
-        addEventListener('mouseout', entrar)
-
+        addEventListener('mouseenter', entrar)
+        addEventListener('mouseout', sair)
+        
         function clicar() {
             a.innerText = 'Clicou!'
-            a.style.background = 'aqua'
+            a.style.background = 'lime'
         }
-
-        function sair() {
-            a.innerText = 'Saiu!'
-            a.style.background = 'blue'
-        }
-
         function entrar() {
             a.innerText = 'Entrou!'
-            a.style.background = 'lime'
+            a.style.background = 'aqua'
+        }
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'gold'
         }
     </script>
 </body>
+<body>
+    <div id="area">
+      Interaja...
+    </div>
+    <script>
+      var a = window.document.getElementById("area");
+      a.addEventListener("click", clicar);
+      a.addEventListener("mouseenter", entrar);
+      a.addEventListener("mouseout", sair);
+      function clicar() {
+        a.innerText = "Clicou!";
+        a.style.background = "lime";
+      }
+      function entrar() {
+        a.innerText = "Entrou!";
+        a.style.background = "aqua";
+      }
+      function sair() {
+        a.innerText = "Saiu!";
+        a.style.background = "gold";
+      }
+    </script>
+  </body>
 </html>
