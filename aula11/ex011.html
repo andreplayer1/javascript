@@ -12,28 +12,26 @@
     </h1>
 
     <form action="#" name="formulario1" id="formulario1">
-        Pais:<input type="text" name="entrada" id="entrada">
+        Pais: <input type="text" name="entrada" id="entrada">
         <input type="button" value="Verificar" onclick="myFunction()">
     </form>
 
-    <div id="resp">
-
+    <div id="resposta">
+        
     </div>
 
     <script>
-        function myFunction(){
-            var entrada = document.querySelector('input#entrada')
-            var res = document.querySelector('div#resp')
-            var pais = (entrada.value)
-            
-            res.innerHTML += `Você mora no <strong>${pais} `
-            if (pais=='Brasil'){
-                res.innerHTML += 'Você é brasileiro!'
+        function myFunction() {
+            var entrada = document.querySelector('input#entrada');
+            var res = document.querySelector('div#resposta');
+            var pais = (entrada.value);
+            res.innerHTML = `Você mora no <strong>${pais}<br>`;
+            if(pais == 'Brasil') {
+                res.innerHTML += 'Você é brasileiro'
             } else {
                 res.innerHTML += 'Você é estrangeiro'
             }
         }
     </script>
-
 </body>
 </html>
