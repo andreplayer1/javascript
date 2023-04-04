@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Ex11.1</title>
+</head>
+<body>
+    <h1>
+        Ex 11
+    </h1>
+
+    <p>
+        Digite sua idade para saber se pode ou não votar.
+    </p>
+
+    <form action="#" name="formulario1" id="formulario1">
+        Idade:<input type="text" name="entrada" id="entrada" placeholder="Idade">
+        <input type="button" value="Verificar" onclick="myFunction()">
+    </form>
+
+    <div id="resposta">
+
+    </div>
+
+    <script>
+        function myFunction(){
+            var entrada = document.querySelector('input#entrada');
+            var resp = document.querySelector('div#resposta');
+            var idade = (entrada.value)
+
+            if(idade < 16){
+                resp.innerHTML = `Você tem ${idade}. Não pode votar!`
+            }else if (idade >= 16 && idade <18 || idade >= 65){
+                resp.innerHTML = `Sua idade é ${idade}. Voto opicional!`
+            }else {
+                resp.innerHTML = `Sua idade é ${idade}. Voto Obrigatório!`
+            }
+        }
+    </script>
+</body>
+</html>
